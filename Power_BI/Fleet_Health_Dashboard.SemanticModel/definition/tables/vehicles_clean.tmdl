@@ -1,0 +1,92 @@
+table vehicles_clean
+	lineageTag: 7dec12e5-7672-46ba-b5cd-41df080edd1a
+
+	measure 'Vehicles Needing Attention' = ```
+			
+			    CALCULATE(
+			        COUNTROWS('vehicles_clean'),
+			        'vehicles_clean'[maintenance_status] IN {"Overdue", "Missing Log"})
+			```
+		formatString: 0
+		lineageTag: a473bc73-fcf7-4f89-b70d-6ef2713e8f00
+
+	column vehicle_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 012aa297-dc1b-4d76-8099-92ce5af70d0f
+		summarizeBy: none
+		sourceColumn: vehicle_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column make
+		dataType: string
+		lineageTag: 8dfa4eeb-84fa-46e6-adc5-14bb6288abff
+		summarizeBy: none
+		sourceColumn: make
+
+		annotation SummarizationSetBy = Automatic
+
+	column model
+		dataType: string
+		lineageTag: 3e10a08f-1f79-4282-9022-db57851c2f5d
+		summarizeBy: none
+		sourceColumn: model
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8041de87-8363-4e9d-b5cb-c1dc04394c9d
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column odometer_reading
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bce5722-d22f-480b-97bf-57379ada4d75
+		summarizeBy: sum
+		sourceColumn: odometer_reading
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_maintenance_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9b650281-c3ec-4b70-81c0-09ac1b58aee7
+		summarizeBy: none
+		sourceColumn: last_maintenance_date
+
+		variation Variation
+			isDefault
+			relationship: 981302fe-d1c8-431a-8fd3-1a0df7b447fe
+			defaultHierarchy: LocalDateTable_f88d188b-ed1b-4671-8348-84db3709a0f5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column maintenance_status
+		dataType: string
+		lineageTag: 4792ef7d-dd38-430b-b508-9431ba277dfd
+		summarizeBy: none
+		sourceColumn: maintenance_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vehicles_clean = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    portfolio_project_5_vehicles_clean = Source{[Schema="portfolio_project_5",Item="vehicles_clean"]}[Data]
+				in
+				    portfolio_project_5_vehicles_clean
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,82 @@
+table drivers_clean
+	lineageTag: 11d8c97c-0a85-46e4-b15a-5447dd505aec
+
+	column driver_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1360eac9-be90-4046-a223-5eec3953369d
+		summarizeBy: none
+		sourceColumn: driver_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: c1a6f00f-0622-43ab-ac8c-6c4de60e527c
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: db3bd57b-2318-4513-9f67-5f4fe44e9162
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column license_class
+		dataType: string
+		lineageTag: 266553d4-06a9-4048-a178-0318ba4cf788
+		summarizeBy: none
+		sourceColumn: license_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column hire_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0357ee0c-ce18-416e-9a50-18d9962bc6f3
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		variation Variation
+			isDefault
+			relationship: 93beb954-7356-4cab-9e5b-f1ce00d8cb22
+			defaultHierarchy: LocalDateTable_c2952e85-49d6-4d79-a23d-28d08071ffa4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column status
+		dataType: string
+		lineageTag: f40158c9-72c9-4353-9b86-e4a0d7274a48
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Driver Full Name' = ```
+			
+			    'drivers_clean'[first_name] & " " & 'drivers_clean'[last_name]
+			```
+		lineageTag: 1a2fb877-8464-4b0f-a1b3-3778cf279238
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition drivers_clean = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    portfolio_project_5_drivers_clean = Source{[Schema="portfolio_project_5",Item="drivers_clean"]}[Data]
+				in
+				    portfolio_project_5_drivers_clean
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

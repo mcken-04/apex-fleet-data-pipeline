@@ -1,0 +1,28 @@
+relationship 4ecd9f4c-55cd-4a96-802d-13c1e21b39d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: delivery_routes_clean.dispatch_timestamp
+	toColumn: LocalDateTable_cecd84d7-5cc7-40e6-9323-d90ed1af0f1a.Date
+
+relationship 9e46ce08-466d-43d8-a382-4f013f627d88
+	joinOnDateBehavior: datePartOnly
+	fromColumn: delivery_routes_clean.delivery_timestamp
+	toColumn: LocalDateTable_4800bb4b-ead7-4deb-beb6-b574a6cece0e.Date
+
+relationship 93beb954-7356-4cab-9e5b-f1ce00d8cb22
+	joinOnDateBehavior: datePartOnly
+	fromColumn: drivers_clean.hire_date
+	toColumn: LocalDateTable_c2952e85-49d6-4d79-a23d-28d08071ffa4.Date
+
+relationship 981302fe-d1c8-431a-8fd3-1a0df7b447fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vehicles_clean.last_maintenance_date
+	toColumn: LocalDateTable_f88d188b-ed1b-4671-8348-84db3709a0f5.Date
+
+relationship AutoDetected_ee84d04d-b8b6-4559-bafb-36e7554d7836
+	fromColumn: delivery_routes_clean.driver_id
+	toColumn: drivers_clean.driver_id
+
+relationship AutoDetected_e5e63f97-6ddb-4fad-9e1b-43f24ef17867
+	fromColumn: delivery_routes_clean.vehicle_id
+	toColumn: vehicles_clean.vehicle_id
+

@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["delivery_routes_clean","drivers_clean","vehicles_clean"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table delivery_routes_clean
+ref table DateTableTemplate_d8498f64-9c6c-43e4-865e-2e1b965d1098
+ref table LocalDateTable_cecd84d7-5cc7-40e6-9323-d90ed1af0f1a
+ref table LocalDateTable_4800bb4b-ead7-4deb-beb6-b574a6cece0e
+ref table drivers_clean
+ref table LocalDateTable_c2952e85-49d6-4d79-a23d-28d08071ffa4
+ref table vehicles_clean
+ref table LocalDateTable_f88d188b-ed1b-4671-8348-84db3709a0f5
+
+ref cultureInfo en-US
+
