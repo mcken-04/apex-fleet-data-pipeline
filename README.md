@@ -33,6 +33,13 @@ This project follows a modern ETL/ELT workflow:
 
 ## Key Insights & Dashboard Feartures
 - **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers).
+<img width="1406" height="790" alt="fuel_consumption" src="https://github.com/user-attachments/assets/a33ccce5-708c-42c2-8525-6f3e95855e2d" />
+
+
+
+
+
+  
 - **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient averaging below  drivers in blue.
 - **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
 
