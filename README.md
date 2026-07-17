@@ -1,4 +1,4 @@
-
+<img src="assets/APEX_logo.png" alt="APEX logo" width="125" height="75">
 
 # Apex Fleet Health & Routing Operations: End to End Data Pipeline
 
@@ -11,7 +11,7 @@
 
 This Project is an **End-to-End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
 
-
+![Fleet Health Dashboard](assets/fleet_health_dashboard_screenshot.png)
 
 
 ---
@@ -34,13 +34,9 @@ This project follows a modern ETL/ELT workflow:
 ## Key Insights & Dashboard Feartures
 - **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers). The number of fuel anomolies can also be drilled down by license class in **Avg Delivery Time by License Class** and by driver in **Dispatch Operations Drilldown**.
 
+![Slicer Demo](assets/fuel_consumption.gif)
 
-
-
-
-
-  
-- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient drivers averaging below 240 minutes in blue, and those highlighted in yellow sitting between each thresholds. 
+- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient drivers averaging below 240 minutes in blue, and those highlighted in yellow sitting between each thresholds. The matrix also gives a detailed look into which drivers are creating unnecessary fuel log mistakes, highlighting those in red with 8 or more log errors.
 - **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
 
 ---
@@ -55,7 +51,10 @@ Apex-Fleet-Data-Pipeline/
 │   ├── Fleet_Health_Dashboard.SemanticModel/# PBIP Data model
 │   ├── Fleet_Health_Dashboard.pbip          # Power BI Project file
 │   └── Fleet_Health_Dashboard.pbix          # Standard Power BI file
-│
+├── assets/
+|   ├── APEX_logo.png                        # Company logo
+|   ├── fleet_health_dashboard_screenshot    # APEX Fleet Health & Delivery Operations screenshot
+|   ├── fuel_consumption.gif                 # Slicer example 
 ├── data/
 │   ├── delivery_routes_raw.csv              # Generated routes dataset
 │   ├── drivers_raw.csv                      # Generated drivers dataset
