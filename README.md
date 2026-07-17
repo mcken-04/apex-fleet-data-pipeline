@@ -1,4 +1,4 @@
-<img width="150" height="75" alt="image" src="https://github.com/user-attachments/assets/9946746c-c6c8-4494-9b6a-35a8bc975cf2" /> 
+
 
 # Apex Fleet Health & Routing Operations: End to End Data Pipeline
 
@@ -9,7 +9,7 @@
 ## Project Overview
 **Apex Regional Deliveries** is a fictional logistics company facing operational bottlenecks. Dispatchers were struggling to identify underperforming drivers, and the VP of Finance suspected major data quality issues regarding reported fuel consumption and vehicle maintenance.
 
-This Project is an **End to End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
+This Project is an **End-to-End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
 
 
 
