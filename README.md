@@ -37,23 +37,26 @@ This project follows a modern ETL/ELT workflow:
 
 ## Repository Structure
 ## 📁 Repository Structure
-
 ```text
 Apex-Fleet-Data-Pipeline/
 │
+├── Power_BI/
+│   ├── Fleet_Health_Dashboard.Report/       # PBIP Report definition
+│   ├── Fleet_Health_Dashboard.SemanticModel/# PBIP Data model
+│   ├── Fleet_Health_Dashboard.pbip          # Power BI Project file
+│   └── Fleet_Health_Dashboard.pbix          # Standard Power BI file
+│
 ├── data/
-│   ├── delivery_routes_raw.csv    # Raw generated data
-│   ├── drivers_raw.csv
-│   └── vehicles_raw.csv
+│   ├── delivery_routes_raw.csv              # Generated routes dataset
+│   ├── drivers_raw.csv                      # Generated drivers dataset
+│   └── vehicles_raw.csv                     # Generated vehicles dataset
 │
-├── scripts/
-│   └── 01_data_generator.py       # Python script used to build the mock dataset
+├── py_scripts/
+│   ├── 01_data_generator.ipynb              # Jupyter Notebook for exploration
+│   └── 01_data_generator.py                 # Executable Python script
 │
-├── sql/
-│   ├── 02_create_raw_tables.sql   # DDL for Postgres tables
-│   └── 03_clean_and_transform.sql # The CTEs and CASE statements to create clean views
-│
-├── dashboard/
-│   └── Apex_Fleet_Dashboard.pbix  # The final Power BI file
+├── sql_scripts/
+│   ├── 02_create_raw_tables.sql             # DDL for Postgres tables
+│   └── 03_clean_and_transform.sql           # CTEs and Views for cleaning
 │
 └── README.md
