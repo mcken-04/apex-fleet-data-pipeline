@@ -40,7 +40,7 @@ This project follows a modern ETL/ELT workflow:
 
 
   
-- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient averaging below  drivers in blue.
+- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient averaging below 240 minutes drivers in blue, and those highlighted yellow sitting between each thresholds.
 - **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
 
 ---
