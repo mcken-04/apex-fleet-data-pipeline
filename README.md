@@ -1,13 +1,15 @@
-# 🚚 Apex Fleet Health & Routing Operations: End-to-End Data Pipeline
+<img width="150" height="75" alt="image" src="https://github.com/user-attachments/assets/9946746c-c6c8-4494-9b6a-35a8bc975cf2" /> 
+
+# Apex Fleet Health & Routing Operations: End to End Data Pipeline
 
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=Power%20BI&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ## Project Overview
-**Apex Regional Deliveries** is a fictional logistics company facing operational bottlenecks. Dispatchers were struggling to identify underperforming drivers, and the VP of FFinance suspected major data quality issues regarding reported fuel consumption and vehicle maintenance.
+**Apex Regional Deliveries** is a fictional logistics company facing operational bottlenecks. Dispatchers were struggling to identify underperforming drivers, and the VP of Finance suspected major data quality issues regarding reported fuel consumption and vehicle maintenance.
 
-This Project is an **End to End Data Analysis and BI Pipeline** designed to solve these business problems/ I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
+This Project is an **End to End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
 
 *(Insert your GIF or Screenshot of your dashboard here!)*
 
@@ -29,9 +31,9 @@ This project follows a modern ETL/ELT workflow:
 ---
 
 ## Key Insights & Dashboard Feartures
-- **Self Serve Anomaly Detection:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers).
-- **Driver Exception Reporting:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in read, while rewarding highly efficient drivers in blue.
-- **Fleet Health Tracking:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
+- **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers).
+- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient averaging below  drivers in blue.
+- **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
 
 ---
 
