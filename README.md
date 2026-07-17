@@ -12,7 +12,7 @@
 This Project is an **End to End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
 
 
-![Fleet Health Dashboard](Power_BI/fleet_health_dahsboard_screenshot.png)
+
 
 ---
 
@@ -32,15 +32,15 @@ This project follows a modern ETL/ELT workflow:
 ---
 
 ## Key Insights & Dashboard Feartures
-- **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers).
-<img width="1406" height="790" alt="fuel_consumption" src="https://github.com/user-attachments/assets/a33ccce5-708c-42c2-8525-6f3e95855e2d" />
+- **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allovwing the VP of Finance to isntantly filter out valid trips and auto-zoom into mathematically impossible fuel recors (e.g., negative gallons or 5,000+ gallon outliers). The number of fuel anomolies can also be drilled down by license class in **Avg Delivery Time by License Class** and by driver in **Dispatch Operations Drilldown**.
+
 
 
 
 
 
   
-- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient averaging below 240 minutes drivers in blue, and those highlighted yellow sitting between each thresholds.
+- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient drivers averaging below 240 minutes in blue, and those highlighted in yellow sitting between each thresholds. 
 - **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status.
 
 ---
