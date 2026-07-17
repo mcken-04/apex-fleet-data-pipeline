@@ -11,8 +11,8 @@
 
 This Project is an **End to End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive , executive-ready Power BI dashboard.
 
-*(Insert your GIF or Screenshot of your dashboard here!)*
-![Fleet Health Dashboard](./Power_BI/fleet_health_dashboard_screenshot.png)
+
+![Fleet Health Dashboard](Power_BI/fleet_health_dahsboard_screenshot.png)
 
 ---
 
