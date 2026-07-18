@@ -12,7 +12,14 @@ The resulting Fleet Health & Routing Operations Dashboard empowers the VP of Fin
 
 
 ## 2. Problem Statement
-APEX Regional Deliveries lacks centralized visibility into its daily fleet operations. Dispatchers are relying on fragmented, manual reporting to track route times, while the VP of Finance has noted severe discrepancies between projected fuel budget
+APEX Regional Deliveries lacks centralized visibility into its daily fleet operations. Dispatchers are relying on fragmented, manual reporting to track route times, while the VP of Finance has noted severe discrepancies between projected fuel budgets and actual fuel consumption. Furthermore, the is no automated system to track vehicle maintenance, leading to vehicles operating with missing or overdue logs.
+
+Without a reliable "Single Source of Truth", management is forced to rely on reactive guesswork. This lack of data governance is resulting in three major business risks:
+  * **Financial Waste:** Unchecked fuel anomalies (e.g., negative entries or mathematically impossible MPG rates) are draining the operating budget.
+  * **Operational Inefficiency:** Dispatchers cannot easily identify or retain drivers who consistently underperform on route times.
+  * **Regulatory RRisk:** Vehicles operating with overdue maintenance logs expose the company to potential DOT fines and safety liabilities.
+
+APEX requires an end-to-end automated data pipeline that cleanses raw, erroneous logistics data and serves it into an interactive, executive-facing Business Intelligence dashboard. This solution must provide automated exception reporting for fuel anomalies, driver efficiency, and fleet compliance.
 
 
 ## 3. Project Objectives
