@@ -17,7 +17,7 @@ APEX Regional Deliveries lacks centralized visibility into its daily fleet opera
 Without a reliable "Single Source of Truth", management is forced to rely on reactive guesswork. This lack of data governance is resulting in three major business risks:
   * **Financial Waste:** Unchecked fuel anomalies (e.g., negative entries or mathematically impossible MPG rates) are draining the operating budget.
   * **Operational Inefficiency:** Dispatchers cannot easily identify or retain drivers who consistently underperform on route times.
-  * **Regulatory RRisk:** Vehicles operating with overdue maintenance logs expose the company to potential DOT fines and safety liabilities.
+  * **Regulatory Risk:** Vehicles operating with overdue maintenance logs expose the company to potential DOT fines and safety liabilities.
 
 APEX requires an end-to-end automated data pipeline that cleanses raw, erroneous logistics data and serves it into an interactive, executive-facing Business Intelligence dashboard. This solution must provide automated exception reporting for fuel anomalies, driver efficiency, and fleet compliance.
 
