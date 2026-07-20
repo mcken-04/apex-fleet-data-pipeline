@@ -1,4 +1,4 @@
--- PORTFOLIO PROJECT 5 TABLE CREATION DDL
+-- APEX Fleet Data Pipeline TABLE CREATION DDL
 
 -- 1. Create driver_table
 CREATE TABLE drivers_raw (
