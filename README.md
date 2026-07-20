@@ -9,7 +9,9 @@
 ## Project Overview
 **Apex Regional Deliveries** is a fictional logistics company facing operational bottlenecks. Dispatchers were struggling to identify underperforming drivers, and the VP of Finance suspected major data quality issues regarding reported fuel consumption and vehicle maintenance.
 
-This Project is an **End-to-End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data, cleanses and models it in a relational database, and serves it to an interactive, executive-ready Power BI dashboard.
+**The Business Problem:** Unreliable raw data and missing maintenance logs were leading to unexpected vehicle breakdowns and untracable fuel cost.
+
+This Project is an **End-to-End Data Analysis and BI Pipeline** designed to solve these business problems. I built a custom ETL workflow that generates raw logistics data of over 10,000 data points, cleansed and modeled it in a relational database, and serves it to an interactive, executive-ready Power BI dashboard.
 
 > **View the full formal Business Requirments Document (BRD) [here](Business_Requirements.md)**
 
