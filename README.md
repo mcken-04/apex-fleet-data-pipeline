@@ -90,7 +90,7 @@ Apex-Fleet-Data-Pipeline/
 │   └── Fleet_Health_Dashboard.pbix          # Standard Power BI file
 ├── assets/
 |   ├── APEX_logo.png                        # Company logo
-|   ├── fleet_health_dashboard_screenshot    # APEX Fleet Health & Delivery Operations screenshot
+|   ├── fleet_health_dashboard.png    # APEX Fleet Health & Delivery Operations screenshot
 |   ├── fuel_consumption.gif                 # Slicer example 
 ├── data/
 │   ├── delivery_routes_raw.csv              # Generated routes dataset
