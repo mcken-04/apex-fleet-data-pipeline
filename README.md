@@ -59,7 +59,7 @@ This project follows a ETL/ELT workflow:
 ---
 
 ## Dashboard Features and Key Business Insights
-By interacting with our dashboard, the VP of finance and Dispatch Manager can uncover several critical operational bottlenecks
+By interacting with our dashboard, the VP of Finance and Dispatch Manager can uncover several critical operational bottlenecks
 - **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allowing the VP of Finance to instantly filter out valid trips and auto-zoom into mathematically impossible fuel records (e.g., negative gallons or 5,000+ gallon outliers). The number of fuel anomalies can also be drilled down by license class in **Avg Delivery Time by License Class** and by driver in **Dispatch Operations Drilldown**.
   - **Business Insight:** The anomaly detection scatter plot revealed mathematically impossible fuel entries. Indicating the severe issue with either the vehicle telemetry sensors or manual driver data entry that requires immediate auditing.
 
