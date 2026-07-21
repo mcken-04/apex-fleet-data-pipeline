@@ -116,4 +116,5 @@ While the initial pipeline successfully identified core operational bottlenecks,
 * **Row-Level Security in Power BI:** Implement RLS within the dashboard so regional dispatch managers can log in and securely view only their drivers and fleet to their assigned operating territories for less data clutter and faster response time.
 * **Route Mapping:** Integrate a mapping API like Google Maps into the data generation script to map actual latitude/longitude coordinates, allowing for visual bottleneck analysis of specific traffic routes in Power BI.
 * **Cloud Migration & Data Automation:** Transition the local PostgreSQL database to a cloud environment like Google Cloud SQL and automate the Python data generation script to update incoming data on a weekly or monthly schedule.
+* **Dashboard Drilldown:** Split these three factors into their own page or dashboard for more precise drilldown on specific needs from different departments.
 
