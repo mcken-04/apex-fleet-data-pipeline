@@ -8,7 +8,7 @@
 
 ## Table of Contents
 - [Project Overview](#-project-overview)
-- [Key Metrics Tracked (KPIs)](#-key-metrics-tracked-kpis)
+- [Key Metrics Tracked (KPIs)](#key-metrics-tracked-kpis)
 - [Executive Dashboard](#-executive-dashboard)
 - [Methodology & Tech Stack](#-methodology--tech-stacks)
 - [Strategic Reccommendations](#-strategic-recommendations)
