@@ -13,7 +13,7 @@
 - [Methodology & Tech Stack](#methodology--tech-stacks)
 - [Strategic Reccommendations](#strategic-recommendations)
 - [Repository Structure](#repository-structure)
-- [Future Enhancments](#future-enhancements-next-steps)
+- [Next Steps](#next-steps)
 
 ---
 
