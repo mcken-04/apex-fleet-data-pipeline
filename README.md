@@ -47,28 +47,28 @@ To solve the operational bottlenecks, the pipeline and dashboard were designed t
 
 This project follows a ETL/ELT workflow:
 
-1. **Data Generation (Python):** - Utilized `Faker` and `pandas` to generate over 10,000 rows of realistic logistics data across three tables: `Drivers`, `Vehicles`, and `Delivery Routes`.
-   - *Data Quality Engineering:* Intentionally injected real-world anomalies (e.g., negative fuel entries, missing maintenance logs, and mathematically impossible MPG rates) to simulate a messy production environment.
-2. **Data Management (PostgreSQL & DBeaver):** - Loaded the raw CSVs into a structured PostgreSQL database using custom schemas (`apex-fleet-data-pipeline`).
+1. **Data Generation (Python):** Utilized `Faker` and `pandas` to generate over 10,000 rows of realistic logistics data across three tables: `Drivers`, `Vehicles`, and `Delivery Routes`.
+   * *Data Quality Engineering:* Intentionally injected real-world anomalies (e.g., negative fuel entries, missing maintenance logs, and mathematically impossible MPG rates) to simulate a messy production environment.
+2. **Data Management (PostgreSQL & DBeaver):** Loaded the raw CSVs into a structured PostgreSQL database using custom schemas (`apex-fleet-data-pipeline`).
 3. **Data Transformation (SQL):** - Wrote SQL scripts utilizing Common Table Expressions (CTEs), `EXTRACT(EPOCH)`, `COALESCE`, and `CASE` statements to clean the data.
-   - Created optimized, analytical `VIEWS` that flagged anomalies in the database before passing them in the BI sector.
-4. **Data Visualization (Power BI):** - Designed a Star Schema data model.
-   - Created custom DAX measures for informative KPIs.
-   - Built an interactive, UI/UX-optimized featuring custom Tile Slicers and Exception Reporting matrixes.
+   * Created optimized, analytical `VIEWS` that flagged anomalies in the database before passing them in the BI sector.
+4. **Data Visualization (Power BI):** Designed a Star Schema data model.
+   * Created custom DAX measures for informative KPIs.
+   * Built an interactive, UI/UX-optimized featuring custom Tile Slicers and Exception Reporting matrixes.
 
 ---
 
 ## Dashboard Features and Key Business Insights
 By interacting with our dashboard, the VP of Finance and Dispatch Manager can uncover several critical operational bottlenecks
-- **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allowing the VP of Finance to instantly filter out valid trips and auto-zoom into mathematically impossible fuel records (e.g., negative gallons or 5,000+ gallon outliers). The number of fuel anomalies can also be drilled down by license class in **Avg Delivery Time by License Class** and by driver in **Dispatch Operations Drilldown**.
-  - **Business Insight:** The anomaly detection scatter plot revealed mathematically impossible fuel entries. Indicating the severe issue with either the vehicle telemetry sensors or manual driver data entry that requires immediate auditing.
+* **Fuel Consumption Detector:** Built an interactive scatter plot with a custom Tile Slicer, allowing the VP of Finance to instantly filter out valid trips and auto-zoom into mathematically impossible fuel records (e.g., negative gallons or 5,000+ gallon outliers). The number of fuel anomalies can also be drilled down by license class in **Avg Delivery Time by License Class** and by driver in **Dispatch Operations Drilldown**.
+  * **Business Insight:** The anomaly detection scatter plot revealed mathematically impossible fuel entries. Indicating the severe issue with either the vehicle telemetry sensors or manual driver data entry that requires immediate auditing.
 
 ![Slicer Demo](assets/fuel_consumption.gif)
 
-- **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient drivers averaging below 240 minutes in blue, and those highlighted in yellow sitting between each threshold. The matrix also gives a detailed look into which drivers are creating unnecessary fuel log mistakes, highlighting those in red with 8 or more log errors. This allows management to shift from "guessing" who is underperforming to implementing targeted retraining.
-   - **Business Insight:** The matrix shows at least 8 drivers struggle to meet the average delivery goal, with 4 others right on the line of failing to meet the threshold.
-- **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status. The donut chart immediately flags vehicles operating "Missing Logs", allowing dispatchers to ground non-compliant vehicles before they result in DOT fines or breakdowns.
-   - **Business Insight:** Over half of the fleet are either overdue for a service (*52%*) or missing a maintenance log (*2%*). 
+* **Dispatch Operations Drilldown:** Developed a conditional formatting matrix that automatically highlights drivers averaging over 265 minutes per route in red, while rewarding highly efficient drivers averaging below 240 minutes in blue, and those highlighted in yellow sitting between each threshold. The matrix also gives a detailed look into which drivers are creating unnecessary fuel log mistakes, highlighting those in red with 8 or more log errors. This allows management to shift from "guessing" who is underperforming to implementing targeted retraining.
+   * **Business Insight:** The matrix shows at least 8 drivers struggle to meet the average delivery goal, with 4 others right on the line of failing to meet the threshold.
+* **Fleet Maintenance Health:** Identified critical fleet risks by isolating vehicles currently operating with "Missing Logs" or "Overdue" maintenance status. The donut chart immediately flags vehicles operating "Missing Logs", allowing dispatchers to ground non-compliant vehicles before they result in DOT fines or breakdowns.
+   * **Business Insight:** Over half of the fleet are either overdue for a service (*52%*) or missing a maintenance log (*2%*). 
 
 ---
 
