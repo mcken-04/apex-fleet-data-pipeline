@@ -15,6 +15,7 @@
 - [Repository Structure](#-repository-structure)
 - [Future Enhancments](#-future-enhancements-next-steps)
 
+---
 
 ## Project Overview
 **Apex Regional Deliveries** is a fictional logistics company facing operational bottlenecks. Dispatchers were struggling to identify underperforming drivers, and the VP of Finance suspected major data quality issues regarding reported fuel consumption and vehicle maintenance.
@@ -36,6 +37,7 @@ To solve the operational bottlenecks, the pipeline and dashboard were designed t
 ---
 
 ## Executive Dashboard
+
 ![Fleet Health Dashboard](assets/fleet_health_dashboard.png)
 
 
