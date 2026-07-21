@@ -43,7 +43,7 @@ To solve the operational bottlenecks, the pipeline and dashboard were designed t
 
 ---
 
-## Methodology & Tech Stack
+## Methodology & Tech Stacks
 
 This project follows a ETL/ELT workflow:
 
